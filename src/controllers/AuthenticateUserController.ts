@@ -10,7 +10,6 @@ class AuthenticateUserController{
             email,
             password
         })
-
         return response.json(token);
     }
 }
