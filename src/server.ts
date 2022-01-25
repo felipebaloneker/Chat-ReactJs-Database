@@ -5,7 +5,6 @@ const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
 const app = express();
-const path = require('path')
 require('dotenv').config()
 
 
@@ -16,5 +15,5 @@ app.use(express.urlencoded({extended:true}));
 app.use(morgan('dev'));
 
 app.use(routes);
-
-app.listen(3000,() =>{console.log('Server is running')});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT,() =>{console.log('Server is running')});
