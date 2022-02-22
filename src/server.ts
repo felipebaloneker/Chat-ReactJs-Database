@@ -4,7 +4,7 @@ import express from 'express'
 import cors from 'cors'
 import { routes } from "./routes"
 const app = express();
-const port = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
 require('dotenv').config()
 
@@ -15,4 +15,4 @@ app.use(express.urlencoded({extended:true}));
 
 app.use(routes);
 
-app.listen(port,() =>{console.log('Server is running')});
+app.listen(PORT,() =>{console.log(`Server is running on port:${PORT}`)});
