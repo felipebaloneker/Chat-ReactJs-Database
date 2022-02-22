@@ -8,9 +8,6 @@ import { ListUsersController } from './controllers/ListUsersController';
 import { ListChatMessageController } from './controllers/ListChatMessageController';
 
 const routes = Router();
-const fs = require('fs');
-const multer = require('multer')
-const router = Router();
 
 const createUserController = new CreateUserController();
 const createMessageController = new CreateMessageController();

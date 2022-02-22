@@ -12,7 +12,7 @@ class Message{
     @Column()
     author_id: string;
 
-    @JoinColumn({name:'author_id'})
+    @JoinColumn({name:"author_id"})
     @ManyToOne(() => User)
     authorId: User;
 
