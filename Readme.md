@@ -31,5 +31,5 @@ Para acessar a aplicação [clique aqui.](https://chat-reactjs-front.herokuapp.c
     Listagem de mensagens do chat.
 - Criados controllers para cada serviço.
 - Criadas rotas para cada controller.
-- Criado middleware de authenticação de usuario.
+- Criado middleware de autenticação de usuario com token.
 - Build da aplicação e deploy do github para Heroku.
