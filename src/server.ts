@@ -3,10 +3,12 @@ import { routes } from "./routes"
 const express = require('express');
 const cors = require('cors');
 const app = express();
+const dotenv = require('dotenv')
 const PORT = process.env.PORT || 3000;
 
-app.use(cors);
-require('dotenv').config()
+dotenv.config()
+
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 

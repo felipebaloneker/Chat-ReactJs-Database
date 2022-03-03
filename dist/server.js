@@ -5,13 +5,10 @@ const routes_1 = require("./routes");
 const express = require('express');
 const cors = require('cors');
 const app = express();
+const dotenv = require('dotenv');
 const PORT = process.env.PORT || 3000;
-const corsOptions = {
-    origin: '*',
-    optionsSuccessStatus: 204
-};
-app.use(cors(corsOptions));
-require('dotenv').config();
+dotenv.config();
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 require("./database");
