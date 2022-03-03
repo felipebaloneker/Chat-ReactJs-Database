@@ -1,18 +1,15 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 require("reflect-metadata");
-require("./database");
-const express_1 = __importDefault(require("express"));
-const cors_1 = __importDefault(require("cors"));
 const routes_1 = require("./routes");
-const app = (0, express_1.default)();
-const PORT = process.env.PORT || 3000;
+const express = require('express');
+const cors = require('cors');
+const app = express();
 require('dotenv').config();
-app.use((0, cors_1.default)());
-app.use(express_1.default.json());
-app.use(express_1.default.urlencoded({ extended: true }));
+const PORT = process.env.PORT || 3000;
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+require("./database");
 app.use(routes_1.routes);
 app.listen(PORT, () => { console.log(`Server is running on port:${PORT}`); });
