@@ -5,9 +5,9 @@ import cors from 'cors'
 import { routes } from "./routes"
 const app = express();
 const PORT = process.env.PORT || 3000;
+require('dotenv').config()
 
 app.use(cors());
-require('dotenv').config()
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
